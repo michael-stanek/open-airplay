@@ -39,10 +39,10 @@
 	
 	<target name="build" depends="prepare" description="Compile">
 		<javac srcdir="${src}" destdir="${bin}"
-			source="1.5" target="1.5"
 			failonerror="true"
 			includes="**/*.java"
-			classpathref="lib.path"/>
+			classpathref="lib.path"
+                        includeantruntime="false"/>
 	</target>
 	
 	<target name="jar" depends="build" description="Create jar">
